@@ -123,12 +123,11 @@ flowchart TD
 
 ## 4. Pesquisa Individual Guiada (20 minutos)
 
-Consulte a documentação oficial do **[JUnit 5 User Guide](https://junit.org/junit5/docs/current/user-guide/)** (especialmente as seções *Writing Tests*, *Annotations* e *Assertions*) e responda às 4 questões abaixo:
-
-1. **Nomes legíveis nos relatórios:** Qual anotação do JUnit 5 permite exibir uma frase amigável (com espaços, acentos e emojis) no relatório de execução do teste, em vez do nome do método Java?
-2. **Testando erros e validações:** Qual método da classe `Assertions` usamos para verificar que um método **lançou uma exceção** esperada (por exemplo, `IllegalArgumentException` quando o valor da compra é negativo)?
-3. **Ciclo de vida do teste:** Qual é a diferença prática entre as anotações `@BeforeEach` e `@BeforeAll`? Quando usamos `@BeforeEach` para instanciar a classe que será testada?
-4. **Além do `assertEquals`:** Cite pelo menos **3 outros métodos de asserção** do JUnit 5 e explique em qual situação cada um é mais adequado do que o `assertEquals`.
+### 🔎 Parte 2 — Pesquisa Individual Guiada (4 Questões)
+1. **Arquitetura do JUnit 5:** Qual o papel de *JUnit Platform*, *JUnit Jupiter* e *JUnit Vintage*?
+2. **Ciclo de Vida:** Qual a diferença prática entre `@BeforeEach` e `@BeforeAll`?
+3. **Asserções Agrupadas:** Por que `assertAll(...)` é melhor do que 4 `assertEquals` soltos quando validamos vários campos de um objeto?
+4. **Testes Parametrizados:** Como `@ParameterizedTest` e `@CsvSource` reduzem duplicação de código nos testes de fronteira?
 
 ---
 
@@ -136,19 +135,13 @@ Consulte a documentação oficial do **[JUnit 5 User Guide](https://junit.org/ju
 
 Agora é a sua vez! No pacote `aulas`, temos duas classes de negócio prontas e uma suíte de testes para você completar.
 
-### Exercício 1 — Completar os testes da `CalculadoraDesconto`
-Abra [`CalculadoraDescontoTest.java`](../src/test/java/com/ada/demo/aula01/CalculadoraDescontoTest.java):
-1. Execute os testes existentes e encontre o **bug de caso de borda** escondido na implementação de [`CalculadoraDesconto.java`](../src/main/java/com/ada/demo/aula01/CalculadoraDesconto.java).
-2. Corrija o bug na classe `CalculadoraDesconto` e veja todos os testes ficarem verdes.
-3. Adicione testes para valores inválidos (compra negativa ou zero) usando `assertThrows`.
-
-### Exercício 2 — Criar os testes da `CalculadoraFrete`
+### Exercício 1 — Criar os testes da `CalculadoraFrete`
 Analise as regras de negócio documentadas na classe [`CalculadoraFrete.java`](../src/main/java/com/ada/demo/aula01/CalculadoraFrete.java) e implemente os testes correspondentes em [`CalculadoraFreteTest.java`](../src/test/java/com/ada/demo/aula01/CalculadoraFreteTest.java):
 * Teste o cálculo para cada região (`SUDESTE`, `SUL`, `NORDESTE`, etc.).
 * Teste a regra de **frete grátis** para compras a partir do valor mínimo.
 * Teste os **casos de borda** (ex.: compra exatamente no valor mínimo para frete grátis, peso igual a zero ou negativo, região nula).
 
-### Exercício 3 (Desafio Extra) — `ContaBancaria`
+### Exercício 2 (Desafio Extra) — `ContaBancaria`
 Abra a classe [`ContaBancaria.java`](../src/main/java/com/ada/demo/aula01/ContaBancaria.java) e crie do zero a classe `ContaBancariaTest.java` em `src/test/java/com/ada/demo/aula01/`:
 * Utilize `@BeforeEach` para inicializar uma conta padrão antes de cada teste.
 * Utilize `@DisplayName` para descrever cada cenário em português claro.
