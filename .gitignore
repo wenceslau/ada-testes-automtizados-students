@@ -1,39 +1,104 @@
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-.kotlin
+############## Files properties to ignore
+application-dev.yaml
+application-prd.yaml
+application-test.yaml
+application-dev.properties
+application-prd.properties
+application-test.properties
+onelogin.properties
 
-### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-*.iws
+############## Externsions to ignore
+*.class
+*.log
+*.ctxt
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.gz
+*.tar.gz
+*.rar
 *.iml
-*.ipr
+*.sublime-workspace
+*.versionsBackup
+*.launch
+*.db
+.env
+.env.dck
+.env.dev
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
+############## files to ignore
 .project
+.classpath
+.apt_generated
+.factorypath
 .settings
 .springBeans
 .sts4-cache
+hs_err_pid*
+replay_pid*
+npm-debug.log
+yarn-error.log
+testem.log
 
-### NetBeans ###
+############## Directories to ignore
+.vscode/*
+.docker
+.idea
+.c9
+
+/dist
+*/dist
+**/dist
+***/dist
+
+/target
+*/target
+**/target
+***/target
+
+/tmp
+*/tmp
+**/tmp
+***/tmp
+
+/log
+*/log
+**/log
+***/log
+
+/logs
+*/logs
+**/logs
+***/logs
+
+/out-tsc
+*/out-tsc
+**/out-tsc
+
+/node_modules
+*/node_modules
+**/node_modules
+***/node_modules
+
+/coverage
+/typings
+
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+############## files to keep
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
-### Mac OS ###
-.DS_Store
+
+############## others
+/e2e/*.js
+/e2e/*.map
